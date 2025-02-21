@@ -1,0 +1,77 @@
+/* Schriftarten und Grundlayout */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f3f2f0;
+  color: #333;
+  line-height: 1.6;
+}
+h1, h2, h3, .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: #4b3327;  /* Warmes Braun */
+}
+
+/* Hero Section (Keimlings-Bild mit Overlay via background-blend-mode) */
+.hero-section {
+  min-height: 60vh;
+  /* Wir nutzen background-blend-mode, um das Bild abzudunkeln */
+  background: url('img/keimling.png') center/cover no-repeat;
+  background-blend-mode: multiply;
+  /* Multiplikation mit dem Overlay-Farbwert: */
+  background-color: rgba(79,46,31,0.5); /* dunkles Braun, halbe Deckkraft */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero-content {
+  padding: 4rem 1rem;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #fdfdfd;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fdfdfd;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Card Hover-Effekt */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+}
+
+/* Einheitliche Bildhöhe in den Cards (Leitung) */
+.same-height {
+  height: 350px;           /* Passe nach Bedarf an */
+  object-fit: cover;       /* Beschneidet das Bild gleichmäßig */
+  object-position: center;
+}
+
+/* Buttons (Bootstrap .btn-primary überschreiben) */
+.btn-primary {
+  background-color: #6d9a77;
+  border-color: #6d9a77;
+}
+.btn-primary:hover {
+  background-color: #5a8061;
+  border-color: #5a8061;
+}
+
+/* Section-Titel */
+.section-title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* ANMELDUNG SECTION - leicht abgehobener Hintergrund */
+.highlight-section {
+  background-color: #f9f7f6;  /* sehr helles Beige */
+}
